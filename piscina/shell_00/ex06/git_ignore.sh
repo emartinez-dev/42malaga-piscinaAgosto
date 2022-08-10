@@ -1,2 +1,2 @@
 #!/bin/bash
-git check-ignore **/*
+git ls-files -io --exclude-standard
