@@ -1,20 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/14 13:29:03 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/14 18:08:13 by franmart         ###   ########.fr       */
+/*   Created: 2022/08/14 18:04:43 by franmart          #+#    #+#             */
+/*   Updated: 2022/08/14 18:11:09 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	int	temp;
-
-	temp = *a;
-	*a = *b;
-	*b = temp;
+	*div = a / b;
+	*mod = a % b;
 }
