@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 10:33:48 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/13 20:07:31 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/14 19:39:00 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,6 @@ void	ft_putnbr(int nb)
 {
 	int	c;
 
-	if (nb < 0)
-	{
-		write(1, "-", 1);
-		nb *= -1;
-		ft_putnbr(nb);
-	}
 	if (nb < 10)
 	{
 		c = nb + 48;
