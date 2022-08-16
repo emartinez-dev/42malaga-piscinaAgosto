@@ -6,18 +6,19 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 18:12:12 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/16 08:36:25 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/16 08:53:21 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcpy(char *dest, char *src)
 {
-	while (*src != '\0')
+	int	i;
+
+	i = 0;
+	while (*(src + i) != '\0')
 	{
-		*dest = *src;
-		src++;
-		dest++;
+		*(dest + i) = *(src + i);
+		i++;
 	}
-	*dest = *src;
 	return (dest);
 }
