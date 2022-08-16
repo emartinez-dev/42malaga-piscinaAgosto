@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 09:17:05 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/16 09:37:03 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/16 19:20:27 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ int	ft_str_is_alpha(char *str)
 	while (*(str + i) != '\0')
 	{
 		c = *(str + i);
-		if (c < 48 || c > 122)
-			return (0);
-		if (c > 57 && c < 65)
+		if (c < 65 || c > 122)
 			return (0);
 		if (c > 90 && c < 97)
 			return (0);
