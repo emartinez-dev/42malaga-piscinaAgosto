@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 17:27:27 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/17 17:46:39 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/17 17:53:28 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putstr_non_printable(char *str)
 		if (c == 10)
 		{
 			write(1, "\\", 1);
-			write(1, "0a" , 2);
+			write(1, "0a", 2);
 		}
 		else
 			write(1, &c, 1);
