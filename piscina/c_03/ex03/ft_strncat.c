@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 18:28:17 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/17 18:36:06 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/17 19:36:04 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ int	ft_strlen(char *str)
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	unsigned int	space_needed;
-	unsigned int	dest_size;
 	unsigned int	i;
+	int				dest_size;
 
 	dest_size = ft_strlen(dest);
 	space_needed = dest_size + ft_strlen(src) + 1;
