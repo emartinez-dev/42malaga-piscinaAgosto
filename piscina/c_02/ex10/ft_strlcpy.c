@@ -6,41 +6,35 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 12:36:28 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/16 17:41:46 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/17 17:15:46 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-
-unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
+int	ft_strlen(char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while (i < size - 2 || *(src + i) != '\0')
+	while (*str != '\0')
 	{
-		*(dest + i) = *(src + i);
 		i++;
+		str++;
 	}
-	if (i < size - 2)
-		i++;
-		*(dest + i) = '\0';
-//	if (size <= i)
-//		return (0);
 	return (i);
 }
 
-int	main(void)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int i;
-	
-	char src[7] = "Holaaa";
-	char dest[2];
-	printf("%s", dest);
-	printf("\n");
-	i = ft_strlcpy(dest, src, 2);
-	printf("%s", dest);
-	printf("\n");
-	printf("%d", i);
+	unsigned int	i;
+	unsigned int	src_len;
+
+	src_len = ft_strlen(src);
+	i = 0;
+	while (i < size - 1 && src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[size - 1] = '\0';
+	return (src_len);
 }
