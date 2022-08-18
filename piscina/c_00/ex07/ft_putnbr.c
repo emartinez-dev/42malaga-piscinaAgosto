@@ -6,17 +6,23 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 11:05:18 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/15 11:36:42 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/18 17:50:23 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <limits.h>
 
 void	ft_putnbr(int nb)
 {
 	int	c;
 
-	if (nb < 0)
+	if (nb == INT_MIN)
+	{
+		write(1, "-214748364", 10);
+		nb = 8;
+	}
+	if (nb < 0 && nb > INT_MIN)
 	{
 		write(1, "-", 1);
 		nb *= -1;
