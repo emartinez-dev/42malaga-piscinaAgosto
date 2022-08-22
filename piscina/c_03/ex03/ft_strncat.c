@@ -6,13 +6,13 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 18:28:17 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/17 19:36:04 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/22 13:36:32 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+unsigned int	ft_strlen(char *str)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (*str != '\0')
@@ -25,21 +25,17 @@ int	ft_strlen(char *str)
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	unsigned int	space_needed;
+	unsigned int	dest_size;
 	unsigned int	i;
-	int				dest_size;
 
-	dest_size = ft_strlen(dest);
-	space_needed = dest_size + ft_strlen(src) + 1;
+	dest_size = ft_strlen(dest) + 1;
 	i = 0;
-	if (space_needed < (sizeof(*dest) / sizeof(dest[0])))
+	while (src[i] != '\0' && i < nb)
 	{
-		while (src[i - 1] != '\0' && i < nb)
-		{
-			dest[dest_size] = src[i];
-			dest_size++;
-			i++;
-		}
+		dest[dest_size] = src[i];
+		dest_size++;
+		i++;
 	}
+	dest[dest_size + 1] = '\0';
 	return (dest);
 }
