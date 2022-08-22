@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 17:52:58 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/17 19:35:24 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/22 12:54:30 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,12 @@ char	*ft_strcat(char *dest, char *src)
 	dest_size = ft_strlen(dest);
 	space_needed = dest_size + ft_strlen(src) + 1;
 	i = 0;
-	if (space_needed < (sizeof(*dest) / sizeof(dest[0])))
+	while (src[i] != '\0')
 	{
-		while (src[i - 1] != '\0')
-		{
-			dest[dest_size] = src[i];
-			dest_size++;
-			i++;
-		}
+		dest[dest_size] = src[i];
+		dest_size++;
+		i++;
 	}
+	src[i] = '\0';
 	return (dest);
 }
