@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 12:36:28 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/22 10:31:08 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/22 10:32:57 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,19 +42,3 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	dest[size - 1] = '\0';
 	return (src_len);
 }
-
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	char string[] = "Hola";
-	char string_dest[5];
-	int	dest_len;
-	
-	dest_len = ft_strlen(string_dest);
-	ft_strlcpy(string_dest, string, 7);
-	printf("%s\n", string_dest);
-	printf("%d", dest_len);
-	return (0);
-}	
