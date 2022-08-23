@@ -6,11 +6,9 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 19:28:52 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/22 16:22:03 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/23 18:17:43 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 int	ft_strlen(char *str)
 {
@@ -48,5 +46,5 @@ char	*ft_strstr(char *str, char *to_find)
 		temp_i = i;
 		i++;
 	}
-	return (NULL);
+	return (0);
 }

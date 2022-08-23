@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/18 09:33:12 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/22 18:40:22 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/23 18:58:29 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		dest[i + dest_size] = '\0';
 		return (src_size + dest_size);
 	}
-	return (dest_size + src_size);
+	return (src_size + size);
 }
