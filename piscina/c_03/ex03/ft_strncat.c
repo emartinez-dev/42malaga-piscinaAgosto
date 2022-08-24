@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 18:28:17 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/23 12:22:59 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/24 12:53:28 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	dest_size = ft_strlen(dest);
 	src_size = ft_strlen(src);
 	i = 0;
-	while (i < nb)
+	while (src[i] && i < nb)
 	{
 		dest[dest_size + i] = src[i];
 		i++;
