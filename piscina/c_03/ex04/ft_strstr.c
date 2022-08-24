@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 19:28:52 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/24 12:54:10 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/24 20:57:26 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,25 +26,22 @@ int	ft_strlen(char *str)
 char	*ft_strstr(char *str, char *to_find)
 {
 	int	i;
-	int	temp_i;
 	int	j;
-	int	size;
 
 	i = 0;
-	size = ft_strlen(str);
-	while (str[i] && i < size)
+	j = 0;
+	if (to_find[0] == '\0')
+		return (str);
+	while (str[i] != '\0')
 	{
-		temp_i = i;
-		j = 0;
-		while (str[temp_i] == to_find[j] || to_find[j] == '\0')
+		while (str[i + j] == to_find[j] && str[i + j] != '\0')
 		{
-			if (to_find[j] == '\0')
-				return (&str[i]);
-			temp_i++;
 			j++;
 		}
-		temp_i = i;
+		if (to_find[j] == '\0')
+			return (str + i);
 		i++;
+		j = 0;
 	}
 	return (0);
 }
