@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 17:31:07 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/24 17:40:07 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/25 19:00:00 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ void	ft_putstr(char *str)
 int	main(int argc, char **argv)
 {
 	if (argc > 0)
+	{
 		ft_putstr(argv[0]);
+		ft_putstr("\n");
+	}
 	return (0);
 }
