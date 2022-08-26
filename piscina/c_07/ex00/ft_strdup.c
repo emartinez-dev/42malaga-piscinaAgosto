@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 11:51:28 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/25 13:13:41 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/26 10:52:39 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ char	*ft_strdup(char *src)
 
 	src_len = ft_strlen(src) + 1;
 	dest = malloc(src_len * sizeof(src[0]));
+	if (!dest)
+		return (0);
 	ft_strcpy(dest, src);
 	return (dest);
 }
