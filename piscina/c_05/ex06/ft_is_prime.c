@@ -6,26 +6,24 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 16:09:10 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/24 16:48:47 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/29 16:36:45 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_is_prime(int nb)
 {
 	int	i;
-	int	divisors;
-	int	remainder;
 
-	divisors = 0;
-	i = 1;
-	if (nb <= 0 || nb == 1)
+	i = 2;
+	if (nb < 2)
 		return (0);
-	while (divisors < 3 && i <= nb)
+	if (nb == 2147483647)
+		return (1);
+	while (i * i < nb)
 	{
-		remainder = nb % i;
-		if (remainder == 0)
-			divisors++;
+		if (nb % i == 0)
+			return (0);
 		i++;
 	}
-	return (!(divisors > 2));
+	return (1);
 }
