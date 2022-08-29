@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 16:49:53 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/29 16:51:40 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/29 17:43:43 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_is_prime(int nb)
 		return (0);
 	if (nb == 2147483647)
 		return (1);
-	while (i * i < nb)
+	while (i * i <= nb)
 	{
 		if (nb % i == 0)
 			return (0);
