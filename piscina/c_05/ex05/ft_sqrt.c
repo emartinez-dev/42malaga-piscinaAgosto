@@ -6,7 +6,7 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 15:55:51 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/24 16:08:12 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/29 13:36:41 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int	ft_sqrt(int nb)
 	int	result;
 
 	i = 0;
+	if (nb > 2147395600)
+		return (0);
 	while (ft_recursive_power(i, 2) <= nb)
 	{
 		result = ft_recursive_power(i, 2);
