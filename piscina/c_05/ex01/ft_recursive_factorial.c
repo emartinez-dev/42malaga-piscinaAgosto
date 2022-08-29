@@ -6,14 +6,14 @@
 /*   By: franmart <franmart@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 11:22:01 by franmart          #+#    #+#             */
-/*   Updated: 2022/08/26 13:04:46 by franmart         ###   ########.fr       */
+/*   Updated: 2022/08/29 12:55:47 by franmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_recursive_factorial(int nb)
 {
 	int	result;
-	
+
 	if (nb < 0)
 		return (0);
 	if (nb < 2)
