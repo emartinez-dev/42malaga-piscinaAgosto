@@ -1,6 +1,6 @@
 # 42Málaga - Piscina
 
-![42 logo](https://pbs.twimg.com/profile_images/1201525003147268097/Uzikrfvt_400x400.jpg)
+![42 logo](https://candidatura.42malaga.com/uploads/admissions/campus/logo_website/32/42Malaga.svg)
 
 Este repositorio contiene todo el código escrito durante mi estancia en la piscina de [42 Málaga](https://42malaga.com/) desde el 8/8/2022 hasta el 2/9/2022.
 
@@ -21,3 +21,4 @@ La piscina es una estancia de 26 días en un bootcamp presencial para aprender l
 * Aprendizaje autodidacta
 * Gestión del tiempo
 * Resiliencia
+
